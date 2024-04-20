@@ -1,0 +1,14 @@
+[package]
+name = "traytilo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+daktilo_lib = "0.6.1"
+image = "0.25.1"
+rdev = "0.5.3"
+tao = "0.27.0"
+tracing = "0.1.40"
+tray-icon = "0.13.4"
