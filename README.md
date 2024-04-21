@@ -20,4 +20,5 @@ cargo install daktilo-tray
 - [X] Caching app state
 - [ ] Configure custom presets
 - [ ] Auto detect new audio devices
+- [ ] Global shortcut
 - [ ] Support other installation methods (nix, winget,...)
