@@ -1,4 +1,4 @@
-// #![windows_subsystem = "windows"]
+#![windows_subsystem = "windows"]
 
 use daktilo_lib::{app::App, audio, embed::EmbeddedConfig};
 use rdev::listen;
@@ -134,10 +134,10 @@ fn main() {
 
     let enabled_icon = load_icon(ICON_ENABLED);
     let disabled_icon = load_icon(ICON_DISABLED);
-    let presets_menu = Submenu::new("presets", true);
-    let devices_menu = Submenu::new("devices", true);
-    let enable_menu = MenuItem::new(if state.enabled { "disable" } else { "enable" }, true, None);
-    let exit_menu = MenuItem::with_id(MenuId("exit".to_string()), "exit", true, None);
+    let presets_menu = Submenu::new("Presets", true);
+    let devices_menu = Submenu::new("Devices", true);
+    let enable_menu = MenuItem::new(if state.enabled { "Disable" } else { "Enable" }, true, None);
+    let exit_menu = MenuItem::new("Exit", true, None);
     let preset_items: Vec<_> = presets
         .iter()
         .enumerate()
@@ -213,7 +213,7 @@ fn main() {
             if event.id() == enable_menu.id() {
                 if state.enabled {
                     state.enabled = false;
-                    enable_menu.set_text("enable");
+                    enable_menu.set_text("Enable");
                     tray_icon
                         .as_mut()
                         .unwrap()
@@ -221,7 +221,7 @@ fn main() {
                         .unwrap();
                 } else {
                     state.enabled = true;
-                    enable_menu.set_text("disable");
+                    enable_menu.set_text("Disable");
                     tray_icon
                         .as_mut()
                         .unwrap()

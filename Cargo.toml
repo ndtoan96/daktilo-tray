@@ -17,3 +17,6 @@ toml = "0.8.12"
 tracing = "0.1.40"
 tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
 tray-icon = "0.13.4"
+
+[build-dependencies]
+winres = "0.1.12"
