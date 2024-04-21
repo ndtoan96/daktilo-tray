@@ -1,5 +1,5 @@
 [package]
-name = "traytilo"
+name = "daktilo-tray"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,8 +7,13 @@ edition = "2021"
 
 [dependencies]
 daktilo_lib = "0.6.1"
+directories = "5.0.1"
 image = "0.25.1"
 rdev = "0.5.3"
+rodio = "0.17.3"
+serde = { version = "1.0.198", features = ["derive"] }
 tao = "0.27.0"
+toml = "0.8.12"
 tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
 tray-icon = "0.13.4"

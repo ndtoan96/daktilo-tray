@@ -331,6 +331,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "claxon"
+version = "0.4.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4bfbf56724aa9eca8afa4fcfadeb479e722935bb2a0900c2d37e0cc477af0688"
+
+[[package]]
 name = "cocoa"
 version = "0.22.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -583,6 +589,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "daktilo-tray"
+version = "0.1.0"
+dependencies = [
+ "daktilo_lib",
+ "directories",
+ "image",
+ "rdev",
+ "rodio",
+ "serde",
+ "tao",
+ "toml",
+ "tracing",
+ "tracing-subscriber",
+ "tray-icon",
+]
+
+[[package]]
 name = "daktilo_lib"
 version = "0.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -617,6 +640,15 @@ checksum = "9ed9a281f7bc9b7576e61468ba615a66a5c8cfdff42420a70aa82701a3b1e292"
 dependencies = [
  "block-buffer",
  "crypto-common",
+]
+
+[[package]]
+name = "directories"
+version = "5.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9a49173b84e034382284f27f1af4dcbbd231ffa358c0fe316541a7337f376a35"
+dependencies = [
+ "dirs-sys",
 ]
 
 [[package]]
@@ -1196,6 +1228,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d231dfb89cfffdbc30e7fc41579ed6066ad03abda9e567ccafae602b97ec5024"
 
 [[package]]
+name = "hound"
+version = "3.5.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "62adaabb884c94955b19907d60019f4e145d091c75345379e70d1ee696f7854f"
+
+[[package]]
 name = "idna"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1391,6 +1429,17 @@ name = "lebe"
 version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "03087c2bad5e1034e8cace5926dec053fb3790248370865f5117a7d0213354c8"
+
+[[package]]
+name = "lewton"
+version = "0.10.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "777b48df9aaab155475a83a7df3070395ea1ac6902f5cd062b8f2b028075c030"
+dependencies = [
+ "byteorder",
+ "ogg",
+ "tinyvec",
+]
 
 [[package]]
 name = "libappindicator"
@@ -1844,6 +1893,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "ogg"
+version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6951b4e8bf21c8193da321bcce9c9dd2e13c858fe078bf9054a288b419ae5d6e"
+dependencies = [
+ "byteorder",
+]
+
+[[package]]
 name = "once_cell"
 version = "1.19.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2282,7 +2340,10 @@ version = "0.17.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3b1bb7b48ee48471f55da122c0044fcc7600cfcc85db88240b89cb832935e611"
 dependencies = [
+ "claxon",
  "cpal",
+ "hound",
+ "lewton",
  "symphonia",
 ]
 
@@ -2830,18 +2891,6 @@ dependencies = [
  "png",
  "thiserror",
  "windows-sys 0.52.0",
-]
-
-[[package]]
-name = "traytilo"
-version = "0.1.0"
-dependencies = [
- "daktilo_lib",
- "image",
- "rdev",
- "tao",
- "tracing",
- "tray-icon",
 ]
 
 [[package]]
