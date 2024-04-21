@@ -2,6 +2,11 @@
 name = "daktilo-tray"
 version = "0.1.0"
 edition = "2021"
+authors = ["Nguyen Duc Toan <ntoan96@gmail.com>"]
+description = "daktilo-tray brings the typewriter emulator daktilo to the tray"
+license-file = "LICENSE"
+categories = ["emulators"]
+keywords = ["tray", "keyboard", "typewriter", "type", "nostalgic"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
